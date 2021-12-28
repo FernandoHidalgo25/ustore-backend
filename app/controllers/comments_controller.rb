@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
     def create
-        comment = logged_in_user.comments.create(comment_params)
+        comment = logged_in_user.comments.create!(comment_params)
         render json: comment
     end 
 
